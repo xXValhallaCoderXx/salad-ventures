@@ -41,7 +41,7 @@ const FormSendTx = ({
         id="amount"
         placeholder="Enter amount"
   
-        className="mb-2"
+        className="mb-2 mt-2"
         error={errors.amount && errors.amount.message}
         {...register("amount")}
       />

@@ -25,7 +25,6 @@ const Button = ({
   className,
   disabled,
 }) => {
-  console.log(TYPE_MAP[type]);
   return (
     <button
       onClick={onClick}

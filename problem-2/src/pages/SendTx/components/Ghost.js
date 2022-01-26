@@ -4,9 +4,13 @@ import { Ghost } from "react-kawaii";
 
 const GhostAvatar = ({ isDirty, isValid, mood, className }) => {
   const [x] = useWindowSize();
-  console.log(x);
   return (
-    <StyledGhost size={x <= 768 ? 100 : 230} mood={mood} color="#596881" className={className} />
+    <StyledGhost
+      size={x <= 768 ? 100 : 230}
+      mood={mood}
+      color="#596881"
+      className={className}
+    />
   );
 };
 

@@ -24,6 +24,7 @@ const schema = yup.object().shape({
 });
 
 const SendTxContainer = () => {
+  // Would prefer to use a reducer as there are computed values possible - but time constraint
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [mood, setMood] = useState("happy");
@@ -41,13 +42,16 @@ const SendTxContainer = () => {
   });
 
   useEffect(() => {
+    // Not proud of this - but it works
     if (!isEmpty(errors)) {
       setMood("sad");
+    } else if (isEmpty(errors) && isValid && loading) {
+      setMood("lovestruck");
     } else {
       setMood("happy");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [errors, watch(["address", "amount", "otp"])]);
+  }, [watch(["address", "amount", "otp"])]);
 
   const onSubmit = (e) => {
     setMood("lovestruck");
@@ -55,7 +59,6 @@ const SendTxContainer = () => {
 
     setTimeout(() => {
       // Fake API
-
       setIsOpen(true);
     }, 2500);
   };
@@ -67,7 +70,6 @@ const SendTxContainer = () => {
     setIsOpen(false);
     setSuccess(true);
   };
-
   return (
     <div className="grid grid-cols-1">
       <div>
@@ -88,8 +90,16 @@ const SendTxContainer = () => {
               Hi!
             </Body>
 
-            <Ghost className="md:order-3 order-2" isValid={isValid} isDirty={isDirty} mood={mood} />
-            <Body variant="2" className="text-center mb-4 mt-4: mt-0 md:order-2 order-3">
+            <Ghost
+              className="md:order-3 order-2"
+              isValid={isValid}
+              isDirty={isDirty}
+              mood={mood}
+            />
+            <Body
+              variant="2"
+              className="text-center mb-4 mt-4: mt-0 md:order-2 order-3"
+            >
               Send your <span className="font-semibold">$SALAD</span>
               &nbsp;to your friends!
             </Body>
