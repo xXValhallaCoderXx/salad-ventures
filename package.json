@@ -7,7 +7,9 @@
   "private": true,
   "workspaces": ["problem-1", "problem-2", "problem-3", "problem-4", "problem-5"],
   "scripts": {
-    "run:problem-1": "",
-    "run:problem-2": "yarn workspace problem-2 run start"
+    "run:problem-1": "yarn workspace problem-1 run start",
+    "run:problem-2": "yarn workspace problem-2 run start",
+    "run:problem-3": "yarn workspace problem-3 run start",
+    "run:problem-4": "yarn workspace problem-4 run start"
   }
 }
