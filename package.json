@@ -10,6 +10,7 @@
     "run:problem-1": "yarn workspace problem-1 run start",
     "run:problem-2": "yarn workspace problem-2 run start",
     "run:problem-3": "yarn workspace problem-3 run start",
-    "run:problem-4": "yarn workspace problem-4 run start"
+    "run:problem-4": "yarn workspace problem-4 run start",
+    "run:problem-5": "yarn workspace problem-5 run start"
   }
 }

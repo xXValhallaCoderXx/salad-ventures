@@ -1,0 +1,19 @@
+{
+  "name": "problem-5",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^2.0.1",
+    "truffle": "^5.4.30",
+    "truffle-plugin-verify": "^0.5.21"
+  },
+  "dependencies": {
+    "ethers": "^5.5.3"
+  },
+  "scripts": {
+    "contracts:verify": "yarn truffle run verify BalanceChecker@0xcD81A218B992f3063A4dce8a7Eee96A322E7b272 --network bsc",
+    "contracts:deploy": "yarn truffle deploy --network bsc",
+    "start": "node check-balance.js"
+  }
+}
