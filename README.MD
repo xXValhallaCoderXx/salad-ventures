@@ -18,6 +18,9 @@
 - To run project in root type `yarn run:problem-2`
 - Development server will spin up and display the web page
 
+https://user-images.githubusercontent.com/19978411/151211961-041d1fc4-335f-4302-9c61-3fa679bfcd1d.mp4
+
+
 ### Problem 3
 - To run project in root type `yarn run:problem-3`
 - Output will be displayed in console
