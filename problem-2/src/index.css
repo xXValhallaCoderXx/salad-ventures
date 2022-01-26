@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Tung";
+  src: local("Tung"),
+    url(./shared/assets/TungstenCondensed-Bold.woff2) format("woff2");
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  font-family: "Sora", sans-serif;
+}
+
+h1 {
+  margin: 0px;
+}
+
+/* .is-primary {
+  background-color: red !important;
+
+}
+
+.is-primary::after {
+  box-shadow: inset -4px -4px red !important;
+} */
+
+input[type="text"]:disabled {
+  background: #dddddd;
+}
+
+.hero {
+  display: block;
+  box-sizing: border-box;
+  height: 900px;
+  background-color: #000c2d;
+  clip-path: ellipse(105% 100% at 62.05% 0%);
+}
+
+.pixel-border {
+  box-shadow: -5px 0 0 0 black, 5px 0 0 0 black, 0 -5px 0 0 black,
+    0 5px 0 0 black;
+}

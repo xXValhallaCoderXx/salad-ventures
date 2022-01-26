@@ -1,0 +1,13 @@
+{
+  "name": "salad-ventures",
+  "version": "1.0.0",
+  "repository": "git@github.com:xXValhallaCoderXx/salad-ventures.git",
+  "author": "xXValhallaCoder <renate.gouveia@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["problem-1", "problem-2", "problem-3", "problem-4", "problem-5"],
+  "scripts": {
+    "run:problem-1": "",
+    "run:problem-2": "yarn workspace problem-2 run start"
+  }
+}
